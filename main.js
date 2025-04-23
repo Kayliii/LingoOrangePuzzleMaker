@@ -19,7 +19,7 @@ function toRuby (word, num) {
  * @param {number[][]} sums
  */
 function sumsToTable (cipher, sums) {
-  sums = completeSums(sums)
+  if (sums[0] && sums[0].length !== 1) sums = completeSums(sums)
   const table = document.createElement('table')
   table.classList.add('sum-table')
   const tbody = document.createElement('tbody')
