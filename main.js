@@ -19,7 +19,8 @@ function toRuby (word, num) {
  * @param {number[][]} sums
  */
 function sumsToTable (cipher, sums) {
-  if (sums[0] && sums[0].length !== 1) sums = completeSums(sums)
+  const single = sums[0] && sums[0].length === 1
+  if (!single) sums = completeSums(sums)
   const table = document.createElement('table')
   table.classList.add('sum-table')
   const tbody = document.createElement('tbody')
@@ -31,7 +32,7 @@ function sumsToTable (cipher, sums) {
       const cell = document.createElement('td')
       cell.innerHTML = toRuby(cipher.toWord(sum[i]), sum[i])
       cell.classList.add('sum-cell')
-      if (i === sum.length - 1) {
+      if (i === sum.length - 1 && !single) {
         cell.classList.add('sum-cell--answer')
         const eq = document.createElement('td')
         eq.classList.add('sum-eq')
