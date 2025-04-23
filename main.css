@@ -1,0 +1,103 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 50%;
+  padding: 1em;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
+
+.control-panel-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.control-panel-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5em;
+}
+
+.sum-table {
+  border-spacing: 0 1.2em;
+  width: 100%;
+}
+
+.sum-cell,
+.sum-eq,
+.sum-plus {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.sum-cell {
+  font-size: 150%;
+}
+
+#output {
+  overflow-y: scroll;
+  margin: 0 0 1em;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 99vh;
+  height: 99svh;
+  padding: 0;
+  margin: 0;
+}
+
+#calculate-button {
+  margin: auto;
+  font-size: 100%;
+  padding: 0.7em 2em;
+}
+
+label {
+  font-size: 90%;
+  display: block;
+}
+
+#wordlist-url-input {
+  width: calc(100% - 1em);
+  box-sizing: border-box;
+  margin: 0.5em;
+}
+
+#min-length-input,
+#summand-count-input {
+  width: 4em;
+  margin: 0.5em;
+}
+
+#cipher-input {
+  text-align: center;
+  font-size: 150%;
+  max-width: 70%;
+  margin: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1b1b1b;
+    color: #ffffff;
+  }
+
+  .control-panel {
+    border-bottom: 1px solid #ffffff;
+  }
+}

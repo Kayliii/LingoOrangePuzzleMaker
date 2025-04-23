@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Lingo Orange Puzzle Generator</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+  <div class='control-panel'>
+    <div class='control-panel-inputs'>
+
+      <!--<div class='control-panel-input'>-->
+      <div class='control-panel-input' style='grid-row: 1 / 3;'>
+        <div>
+          <label for='wordlist-url-input'>Load word list from url</label>
+          <input id='wordlist-url-input'>
+          <button type='button' id='wordlist-url-button'>Download</button>
+        </div>
+        <div style='user-select: none; font-size: 80%;'>&mdash; or &mdash;</div>
+        <div>
+          <label for='paintings'>Upload word list</label>
+          <input type='file' id='wordlist-file-input'>
+        </div>
+      </div>
+      <!--</div>-->
+
+      <!--<div class='control-panel-input'>-->
+      <div>  
+        <label for='cipher-input'>Word to use as a cipher</label>
+        <input id='cipher-input'>
+      </div>
+      <div>
+        <button type='button' id='calculate-button'>Calculate</button>
+      </div>
+      <!--</div>-->
+
+      <!--<div class='control-panel-input'>-->
+      <div>
+        <label for='min-length-input'>Minimum word length</label>
+        <input id='min-length-input' type='number' min='1' value='4'>
+      </div>
+      <div>
+        <label for='summand-count-input'>Summand count</label>
+        <input id='summand-count-input' type='number' min='1' value='2'>
+      </div>
+      <!--</div>-->
+    </div>
+  </div>
+  <div id='output'></div>
+  <script src='main.js'></script>
+</body>
+</html>
